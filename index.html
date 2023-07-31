@@ -9,8 +9,11 @@
 <body>
     <div class="card">
         <div class="search">
-            <input type="text" placeholder="Enter your city" spellcheck="false">
+            <input type="text" placeholder="To Know Weather Entery City" spellcheck="false">
             <button><img src="images/search.png" alt="search img"></button>
+        </div>
+        <div class="errorMessage">
+            <p >You are type invalid city name!</p>
         </div>
 
         <!-- another section  -->
@@ -38,22 +41,12 @@
         </div>
     </div>
 
-    <script>
-        const apiKey =  "863242cfb2b1d357e6093d9a4df19a4b";
-        const apiUrl = "https://api.openweathermap.org/data/2.5/weather? units=metric&q=dhaka";
-
-        async function checkWeather(){
-            const response = await fetch(apiUrl + `&appid=${apiKey}`);
-            var data = await response.json()
-            
-            console.log(data);
-        }
-        checkWeather();
-    </script>
-
+    
+    
     <!-- Const apiKey
     =
     "863242cfb2b1d357e6093d9a4df19a4b";
     const apiUrl = "https://api.openweathermap.org/data/2.5/weather? units=metric&q=bangalore"; -->
+<script src="js/script.js"></script>
 </body>
 </html>
